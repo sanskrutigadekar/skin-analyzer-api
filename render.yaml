@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: skin-analyzer-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FACEPP_KEY
+        sync: false
+      - key: FACEPP_SECRET
+        sync: false
+```
+
+### Step 3.7 — Create `.gitignore`
+
+Right-click `flask-api/` → New File → `.gitignore`:
+```
+venv/
+.env
+__pycache__/
+*.pyc
