@@ -1,5 +1,5 @@
 // Skin Analyzer JavaScript
-const API_URL = 'https://skin-analyzer-api.onrender.com'; // Update with your Render URL
+const API_URL = 'https://skin-analyzer-api-1.onrender.com/'; // Update with your Render URL
 
 function initSkinAnalyzer() {
     const container = document.getElementById('skin-analyzer-container');
