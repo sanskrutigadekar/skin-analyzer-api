@@ -1,0 +1,76 @@
+/* Playful Styles for Skin Analyzer */
+
+/* Upload Area Styling */
+.upload-area {
+    background: linear-gradient(135deg, rgba(255,229,217,0.5), rgba(255,183,168,0.2));
+    border: 3px dashed var(--coral);
+    border-radius: 30px;
+    padding: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area:hover {
+    border-color: var(--honey);
+    background: rgba(255,229,217,0.7);
+    transform: scale(1.02);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-emojis {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 99;
+}
+
+/* Game Cards Hover */
+.game-card {
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255,183,168,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upload-area {
+        padding: 30px;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--coral);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--honey);
+}
